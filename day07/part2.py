@@ -81,4 +81,3 @@ for i, (_, bid) in enumerate(ranks_bids):
     output += (i + 1) * bid
 
 print(output)
-# 248909434
