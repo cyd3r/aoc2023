@@ -2,7 +2,7 @@ from pathlib import Path
 
 point_sum = 0
 
-with open(Path(__file__).parent / 'input.txt') as f:
+with open(Path(__file__).parent / "input.txt") as f:
     for line in f.readlines():
         numbers = line.strip().split(": ")[1]
         left, right = numbers.split(" | ")

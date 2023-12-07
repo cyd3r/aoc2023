@@ -21,6 +21,7 @@ def to_arr(text):
     # let the cards start at 1
     return np.array(values) - 1
 
+
 def get_hand_type(cards):
     unique_cards, counts = np.unique(cards, return_counts=True)
     if len(unique_cards) == 1 and counts.max() == 5:
@@ -45,8 +46,9 @@ def get_hand_type(cards):
         type_id = 0
     else:
         raise RuntimeError(cards)
-    
+
     return type_id
+
 
 def get_rank(cards):
     card_rank = 0
@@ -70,6 +72,6 @@ with open(Path(__file__).parent / "input.txt") as f:
 ranks_bids = sorted(ranks_bids, key=lambda x: x[0])
 output = 0
 for i, (_, bid) in enumerate(ranks_bids):
-    output += (i+1)*bid
+    output += (i + 1) * bid
 
 print(output)
